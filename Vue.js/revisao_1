@@ -1,0 +1,12 @@
+Aprendemos que um projeto criado com Vue CLI utiliza Webpack para criar os bundles do nosso projeto. Um ou mais bundles podem ser criados, dependendo se o recurso de code splitting foi utilizado ou não. Um dos bundles é o primeiro a ser carregado e a partir dele toda mágica do Vue.js ocorre dentro do nosso navegador.
+
+Por mais que nossos bundles sejam arquivos JavaScript, eles também empacotam todo o CSS necessário pela aplicação. Por debaixo dos panos, quando a aplicação é carregada, os estilos são injetados no navegador através da tag style. No final, o resultado é o mesmo como se tivéssemos importados os estilos manualmente em index.html.
+
+No entanto, projetos criados com Vue CLI estão preparados apenas para lidar com os estilos definidos nos próprio componentes e caso queiramos carregar um arquivo CSS que não pertença a um componente precisaremos importá-lo em nosso projeto, como ele fosse um módulo. Não precisamos meditar muito que arquivos CSS não são modulares. É por isso que o Webpack precisa da ajuda de loaders para poder interpretar a importação de CSS's com a instrução import e adicioná-los no bundle do projeto.
+
+A comunidade Webpack já disponibiliza uma série de loaders com as mais diversas finalidades. Entre eles, os loaders css-loader e style-loader são o que precisamos para podermos importar arquivos CSS.
+
+Por fim, quando usamos a instrução import, se usarmos ./ estamos acessando arquivos ou pastas dentro da pasta src. Se omitirmos o ./ estamos acessando um módulo dentro da pasta node_modules.
+
+/* Opinião do instrutor */
+O uso de Webpack não é exclusive do Vue CLI. Webpack se tornou muito popular na comunidade React, inclusive muitos projetos feitos em Angular também o utilizam.
