@@ -1,4 +1,4 @@
-#!/home/cristoffer_pogan/Entwicklung/Tutorials/Alura/Formacao_Data_Science/Testando_Hipoteses/.venv/bin/python
+#!/home/cristoffer_pogan/Entwicklung/Alura/Formacoes/Data_Science/Testando_Hipoteses/.venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
