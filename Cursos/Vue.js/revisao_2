@@ -1,0 +1,12 @@
+A popularidade de pré-processadores sempre esteve em alta. Talvez, um dos pré-processadores mais usados pelo mercado seja o SASS. Tanto isso é relevante que podemos declarar nossos estilos usando SASS. No entanto, Webpack vem parcialmente configurado para lidar com essa linguagem sendo necessário carregar o compilador do SASS e um loader específico.
+
+O compilador SASS é o módulo node-sass e o loader é o sass-loader, ambos baixados pelo npm. Nenhuma outra configuração é necessária no arquivo webpack.config.js.
+
+Em relação aos nosso componentes, é necessário adicionar o atributo lang com o valor scss para que possamos usar a sintaxe do SASS. Pode parecer estranho usarmos scss, quando na verdade o correto seria sassno atributo, mas nesse caso é esse o procedimento. Um ponto chato é que os editores de texto podem não reconhecer a sintaxe e dar um erro de compilação que pode ser ignorado, mas é possível resolver isso.
+
+A solução é criar o estilo em um arquivo externo, por exemplo Botao.scss dentro da mesma pasta do componente e importá-lo dentro da tag <style> do componente através de @import. Fazendo isso, podemos usar como lang o sass no lugar de scss. No entanto, o nome do arquivo precisa ter a extensão scss. No final, fique tranquilo que seu código SASS será devidamente processado.
+
+Por fim, o build do projeto conterá o conteúdo de todos os arquivos scss importados.
+
+/* Opinião do instrutor */
+Bem que o Vue CLI já pudesse ter registrado em seu package.json os módulos que baixamos. Vamos dar um desconto, pois ele já faz muita coisa.

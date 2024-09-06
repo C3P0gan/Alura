@@ -1,0 +1,41 @@
+{
+  "projetos": [
+    {
+      "id": 1,
+      "nome": "Alura Tracker"
+    },
+    {
+      "nome": "Adubladoinga",
+      "id": 2
+    }
+  ],
+  "tarefas": [
+    {
+      "id": 1,
+      "duracaoEmSegundos": 360,
+      "descricao": "Configuração do ambiente",
+      "projeto": {
+        "id": 1,
+        "nome": "Alura Tracker"
+      }
+    },
+    {
+      "duracaoEmSegundos": 6,
+      "descricao": "Refatoração VueX",
+      "projeto": {
+        "id": 1,
+        "nome": "Alura Tracker"
+      },
+      "id": 2
+    },
+    {
+      "duracaoEmSegundos": 0,
+      "descricao": "Teste",
+      "projeto": {
+        "nome": "Adubladoinga",
+        "id": 2
+      },
+      "id": 3
+    }
+  ]
+}

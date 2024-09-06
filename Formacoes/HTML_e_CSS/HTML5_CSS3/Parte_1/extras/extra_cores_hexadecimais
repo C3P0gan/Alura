@@ -1,0 +1,31 @@
+Alfabeto humano: abcdef...
+
+Alfabeto binário: 01
+
+Alfabeto numérico: 0123456789
+
+Alfabeto hexadecimal: 0123456789ABCDEF
+
+RGB = Red Green Blue
+
+# _ _ _ _ _ _
+
+0 = ausência
+
+F = máximo
+
+Ausência de cor (Preto): #000000
+
+Branco: #FFFFFF
+
+Vermelho: #FF0000
+
+Alfabeto RGB: 0, 1, 2, 3, ..., 255
+
+ausência = 0
+
+máximo = 255
+
+Branco: rgb(255,255,255)
+
+Azul: rgb(0,0,255)
