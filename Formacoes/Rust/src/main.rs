@@ -34,7 +34,7 @@ fn scope() {
         std::mem::size_of_val(&variable)
     );
 
-    let variable: i16 = 301; // Variables despite immutables, can be redeclared.
+    let variable: i16 = 301; // Variables despite immutable, can be redeclared.
     println!(
         "variable = {}, size = {}",
         variable,
