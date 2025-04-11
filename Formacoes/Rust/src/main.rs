@@ -142,13 +142,17 @@ fn steal(string: &mut String) {
 
 fn pattern_matching() {
     for x in 1..=20 {
-        println!("{}: {}", x, match x {
-            1 => "Little",
-            2 | 3 => "A little",
-            4..=10 => "A bunch",
-            _ if x % 2 == 0 => "A good amount",
-            _ => "A lot",
-        });
+        println!(
+            "{}: {}",
+            x,
+            match x {
+                1 => "Little",
+                2 | 3 => "A little",
+                4..=10 => "A bunch",
+                _ if x % 2 == 0 => "A good amount",
+                _ => "A lot",
+            }
+        );
     }
 }
 
@@ -156,7 +160,7 @@ fn errors() {
     // panic!("Error"); // Similar to 'raise' in Python
     match result() {
         Ok(s) => println!("Success string = {}", s),
-        Err(n) => println!("Error code = {}", n)
+        Err(n) => println!("Error code = {}", n),
     }
 }
 
