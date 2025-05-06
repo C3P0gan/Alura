@@ -98,10 +98,88 @@ fn optional_contents() {
     };
 
     println!("{:?}", &file_content);
+
+    if let Some(value) = file_content {
+        println!("Now I'm sure there's a value {}", value);
+    }
 }
 
 fn read_file(_file_path: String) -> Option<String> {
     Some(String::from("File contents"))
+}
+
+fn vectors() {
+    // let mut grades: Vec<f32> = Vec::new();
+    let mut grades: Vec<f32> = Vec::with_capacity(4);
+    // let mut grades: Vec<f32> = vec![10.0, 8.8, 6.5];
+
+    println!("Capacity = {}", grades.capacity());
+    println!("{:?}", grades);
+
+    grades.push(10.0);
+    grades.push(8.8);
+    grades.push(6.5);
+
+    println!("Capacity = {}", grades.capacity());
+    println!("{:?}", grades);
+
+    grades.push(5.5);
+
+    println!("Grade 1 = {}", grades[0]);
+
+    println!(
+        "Grade 6 = {}",
+        match grades.get(7) {
+            // Some(&n) => n,
+            Some(n) => *n,
+            None => 0.0,
+        }
+    );
+
+    /* while let Some(grade) = grades.pop() {
+        println!("Removed value = {}", grade);
+    } */
+
+    for grade in &grades {
+        println!("Grade = {}", grade);
+    }
+
+    println!("{:?}", grades);
+}
+
+struct Owner {
+    name: String,
+    surname: String,
+}
+
+struct Account {
+    owner: Owner,
+    balance: f64,
+}
+
+impl Account {
+    fn withdraw(&mut self, value: f64) {
+        self.balance -= value;
+    }
+}
+
+fn account() {
+    let owner: Owner = Owner{
+        name: String::from("Cristoffer"),
+        surname: String::from("Pogan"),
+    };
+
+    let mut account: Account = Account {
+        owner,
+        balance: 100.0,
+    };
+
+    account.withdraw(50.0);
+
+    println!(
+        "Account information: Owner = {} {}, Balance = {}",
+        account.owner.name, account.owner.surname, account.balance
+    );
 }
 
 fn main() {
@@ -113,4 +191,8 @@ fn main() {
     colors();
 
     optional_contents();
+
+    vectors();
+
+    account();
 }
