@@ -8,7 +8,7 @@ def main() -> None:
         bootstrap_servers='localhost:9092',
         auto_offset_reset='earliest',
         enable_auto_commit=True,
-        group_id='ECOMMERCE',
+        group_id=KafkaConsumer.__name__,
         value_deserializer=lambda v: json.loads(v.decode('utf-8'))
     )
 
