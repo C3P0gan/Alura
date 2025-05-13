@@ -1,6 +1,6 @@
 from typing import Self, TypeVar
 from kafka import KafkaProducer
-import json
+from json import dumps
 
 T = TypeVar('T')
 
@@ -10,7 +10,7 @@ class KafkaDispatcher:
         self.producer = KafkaProducer(
             bootstrap_servers='127.0.0.1:9092',
             key_serializer=lambda k: k.encode('utf-8') if k else None,
-            value_serializer=lambda v: json.dumps(v).encode('utf-8')
+            value_serializer=lambda v: dumps(v).encode('utf-8')
         )
 
     def send(self, topic: str, key: str, value: T) -> None:

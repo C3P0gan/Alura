@@ -1,3 +1,4 @@
+from kafka.consumer.fetcher import ConsumerRecord
 from kafka_service import KafkaService
 
 
@@ -9,7 +10,7 @@ class LogService(KafkaService):
             callback=self.parse
         )
 
-    def parse(self, record) -> None:
+    def parse(self, record: ConsumerRecord) -> None:
         print('-' * 60)
         print(f"LOG: {record.topic}\n"
               f"key: {record.key}\n"

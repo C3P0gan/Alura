@@ -1,5 +1,6 @@
+from kafka.consumer.fetcher import ConsumerRecord
 from kafka_service import KafkaService
-import json
+from json import loads
 
 
 class FraudDetectorService(KafkaService):
@@ -9,10 +10,10 @@ class FraudDetectorService(KafkaService):
             topic='ECOMMERCE_NEW_ORDER',
             callback=self.parse,
             override_properties={
-                'value_deserializer': lambda v: json.loads(v).encode('utf-8')}
+                'value_deserializer': lambda v: loads(v).encode('utf-8')}
         )
 
-    def parse(self, record):
+    def parse(self, record: ConsumerRecord) -> None:
         print('-' * 60)
         print("Processing new order, checking for fraud\n"
               f"LOG: {record.topic}\n"
