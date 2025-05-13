@@ -1,19 +1,26 @@
 from kafka_dispatcher import KafkaDispatcher
-from random import randint
+from random import random, randint
+from dataclasses import asdict
+from order import Order
 from uuid import uuid4
+import json
 
 
 def main() -> None:
     with KafkaDispatcher() as dispatcher:
         try:
             for i in range(10):
-                key = str(uuid4())
-                value = f"{key}, {randint(1_000, 10_000)}, {
-                    randint(10_000, 100_000)}"
-                dispatcher.send('ECOMMERCE_NEW_ORDER', key=key, value=value)
+                user_id = str(uuid4())
+                order_id = randint(1_000, 10_000)
+                amount = random() * 5_000 + 1
+
+                order = json.dumps(asdict(Order(user_id, order_id, amount)))
+                dispatcher.send('ECOMMERCE_NEW_ORDER',
+                                key=user_id, value=order)
 
                 email = 'Thank you for your order! We are processing your order'
-                dispatcher.send('ECOMMERCE_SEND_EMAIL', key=key, value=email)
+                dispatcher.send('ECOMMERCE_SEND_EMAIL',
+                                key=user_id, value=email)
         except Exception as e:
             print(f"Failed sending orders: {e}")
 
