@@ -1,4 +1,5 @@
 from kafka_service import KafkaService
+import json
 
 
 class FraudDetectorService(KafkaService):
@@ -6,7 +7,9 @@ class FraudDetectorService(KafkaService):
         super().__init__(
             group_id=FraudDetectorService.__class__.__name__,
             topic='ECOMMERCE_NEW_ORDER',
-            callback=self.parse
+            callback=self.parse,
+            override_properties={
+                'value_deserializer': lambda v: json.loads(v).encode('utf-8')}
         )
 
     def parse(self, record):
