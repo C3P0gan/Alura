@@ -8,3 +8,4 @@ transformers==4.44.2
 numpy==1.26.4
 torch==2.5.0  # +cu121
 torchaudio==2.5.0  # +cu121
+pypdf==5.5.0

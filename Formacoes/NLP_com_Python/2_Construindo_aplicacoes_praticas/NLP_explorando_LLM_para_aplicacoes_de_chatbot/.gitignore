@@ -1,3 +1,5 @@
 .venv/
 .virtual_documents/
 .ipynb_checkpoints/
+
+.env
