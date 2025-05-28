@@ -1,0 +1,3 @@
+[submodule "Formacoes/Apache_Kafka"]
+	path = Formacoes/Apache_Kafka
+	url = git@github.com:C3P0gan/Apache-Kafka.git
