@@ -25,3 +25,6 @@
 [submodule "Formacoes/NLP_com_Python"]
 	path = Formacoes/NLP_com_Python
 	url = git@github.com:C3P0gan/NLP-com-Python.git
+[submodule "Formacoes/Jornada_em_Machine_Learning"]
+	path = Formacoes/Jornada_em_Machine_Learning
+	url = git@github.com:C3P0gan/Jornada-em-Machine-Learning.git
