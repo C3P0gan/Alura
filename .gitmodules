@@ -4,3 +4,6 @@
 [submodule "Formacoes/Data_Science"]
 	path = Formacoes/Data_Science
 	url = git@github.com:C3P0gan/Data-Science.git
+[submodule "Formacoes/HTML_e_CSS"]
+	path = Formacoes/HTML_e_CSS
+	url = git@github.com:C3P0gan/HTML-e-CSS.git
