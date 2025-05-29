@@ -19,3 +19,6 @@
 [submodule "Formacoes/Scripting"]
 	path = Formacoes/Scripting
 	url = git@github.com:C3P0gan/Scripting.git
+[submodule "Formacoes/Shell_Scripting"]
+	path = Formacoes/Shell_Scripting
+	url = git@github.com:C3P0gan/Shell-Scripting.git
