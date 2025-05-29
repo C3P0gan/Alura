@@ -1,3 +1,6 @@
 [submodule "Formacoes/Apache_Kafka"]
 	path = Formacoes/Apache_Kafka
 	url = git@github.com:C3P0gan/Apache-Kafka.git
+[submodule "Formacoes/Data_Science"]
+	path = Formacoes/Data_Science
+	url = git@github.com:C3P0gan/Data-Science.git
