@@ -16,3 +16,6 @@
 [submodule "Formacoes/Rust"]
 	path = Formacoes/Rust
 	url = git@github.com:C3P0gan/Rust.git
+[submodule "Formacoes/Scripting"]
+	path = Formacoes/Scripting
+	url = git@github.com:C3P0gan/Scripting.git
