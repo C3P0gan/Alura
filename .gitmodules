@@ -22,3 +22,6 @@
 [submodule "Formacoes/Shell_Scripting"]
 	path = Formacoes/Shell_Scripting
 	url = git@github.com:C3P0gan/Shell-Scripting.git
+[submodule "Formacoes/NLP_com_Python"]
+	path = Formacoes/NLP_com_Python
+	url = git@github.com:C3P0gan/NLP-com-Python.git
