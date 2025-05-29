@@ -7,3 +7,6 @@
 [submodule "Formacoes/HTML_e_CSS"]
 	path = Formacoes/HTML_e_CSS
 	url = git@github.com:C3P0gan/HTML-e-CSS.git
+[submodule "Formacoes/Machine_Learning"]
+	path = Formacoes/Machine_Learning
+	url = git@github.com:C3P0gan/Machine-Learning.git
