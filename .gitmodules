@@ -10,3 +10,6 @@
 [submodule "Formacoes/Machine_Learning"]
 	path = Formacoes/Machine_Learning
 	url = git@github.com:C3P0gan/Machine-Learning.git
+[submodule "Formacoes/Machine_Learning_Avancada"]
+	path = Formacoes/Machine_Learning_Avancada
+	url = git@github.com:C3P0gan/Machine-Learning-Avancada.git
