@@ -13,3 +13,6 @@
 [submodule "Formacoes/Machine_Learning_Avancada"]
 	path = Formacoes/Machine_Learning_Avancada
 	url = git@github.com:C3P0gan/Machine-Learning-Avancada.git
+[submodule "Formacoes/Rust"]
+	path = Formacoes/Rust
+	url = git@github.com:C3P0gan/Rust.git
